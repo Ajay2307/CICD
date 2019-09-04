@@ -21,6 +21,7 @@ steps:
     goals: 'package'
 - task: AzureWebApp@1
   inputs:
+    azureSubscription: 'Free Trial'
     appType: webAppLinux
     appName: 'prodevans'
      
