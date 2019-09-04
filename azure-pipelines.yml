@@ -7,7 +7,7 @@
     appType: 'webApp'
     appName: 'prodevans'
     deployToSlotOrASE: true
-    resourceGroupName: 'myResourceGroup'
+    resourceGroupName: 'myresourcegroup'
     slotName: 'production'
     package: '$(System.DefaultWorkingDirectory)/**/*.zip'
     deploymentMethod: 'auto'
