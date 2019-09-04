@@ -1,6 +1,16 @@
 # Maven
 # Build your Java project and run tests with Apache Maven.
 # Add steps that analyze code, save build artifacts, deploy, and more:
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'freetrial(0e112f62-bba7-43d5-81ce-02ddeac85a26)'
+    appType: 'webApp'
+    appName: 'prodevans'
+    deployToSlotOrASE: true
+    resourceGroupName: 'myResourceGroup'
+    slotName: 'production'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    deploymentMethod: 'auto'
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
 trigger:
@@ -19,9 +29,5 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
-- task: AzureWebApp@1
-  inputs:
-    azureSubscription: ' freetrial '
-    appType: webAppLinux
-    appName: 'prodevans'
+
     
