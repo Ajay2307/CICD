@@ -22,7 +22,7 @@ steps:
     goals: 'package'
 - task: AzureWebApp@1
   inputs:
-    azureSubscription: 'freetrial ( 0e112f62-bba7-43d5-81ce-02ddeac85a26 )'
+    azureSubscription: 'cicd'
     appType: webAppLinux
     appName: 'prodevans'
     
