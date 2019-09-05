@@ -25,6 +25,9 @@ steps:
     azureSubscription: 'cicd'
     appType: webAppLinux
     appName: 'prodevans'
+    package: '$(System.DefaultWorkingDirectory)/**/*.war'
+
+    
     
 
     
